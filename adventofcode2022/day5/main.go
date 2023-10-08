@@ -27,21 +27,21 @@ func readInput() []string {
 	return input
 }
 
-type BoxQueue struct {
+type BoxStack struct {
 	boxen []rune
 }
 
-func (q *BoxQueue) Peek() rune {
+func (q *BoxStack) Peek() rune {
 	return q.boxen[len(q.boxen)-1]
 }
 
-func (q *BoxQueue) Pop() rune {
+func (q *BoxStack) Pop() rune {
 	r := q.Peek()
 	q.boxen = q.boxen[:len(q.boxen)-1]
 	return r
 }
 
-func (q *BoxQueue) Push(r rune) {
+func (q *BoxStack) Push(r rune) {
 	q.boxen = append(q.boxen, r)
 }
 
@@ -54,9 +54,9 @@ func splitInput(input []string) (boxLayout, moves []string) {
 	return nil, nil
 }
 
-func parseBoxen(bs []string) []BoxQueue {
+func parseBoxen(bs []string) []BoxStack {
 	// so bad
-	boxen := make([]BoxQueue, 9) // cry
+	boxen := make([]BoxStack, 9) // cry
 
 	for i := len(bs) - 2; i >= 0; i-- {
 		for j := 0; j < 9; j++ {
@@ -122,7 +122,7 @@ func part2() {
 	fmt.Printf("Boxen: %v\n", boxen)
 
 	moves := parseMoves(b)
-	bq := BoxQueue{}
+	bq := BoxStack{}
 	for _, v := range moves {
 		for i := 0; i < v.count; i++ {
 			bq.Push(boxen[v.from-1].Pop())
