@@ -1,7 +1,8 @@
 [package]
-name = "adventofcode2025_day1"
+name = "adventofcode2025_day2"
 version = "0.1.0"
 edition = "2021"
 
 [dependencies]
 common = { path = "../common" }
+ 

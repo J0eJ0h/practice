@@ -1,5 +1,8 @@
 [workspace]
 members = [
     "adventofcode2025/day1",
+    "adventofcode2025/common",
+    "adventofcode2025/day2",
+    "adventofcode2025/day3",
 ]
 resolver = "2"

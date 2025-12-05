@@ -3,21 +3,7 @@
 version = 4
 
 [[package]]
-name = "adventofcode2025_day1"
-version = "0.1.0"
-dependencies = [
- "common",
-]
-
-[[package]]
 name = "adventofcode2025_day2"
-version = "0.1.0"
-dependencies = [
- "common",
-]
-
-[[package]]
-name = "adventofcode2025_day3"
 version = "0.1.0"
 dependencies = [
  "common",
