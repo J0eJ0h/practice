@@ -4,5 +4,6 @@ members = [
     "adventofcode2025/common",
     "adventofcode2025/day2",
     "adventofcode2025/day3",
+    "adventofcode2025/day4",
 ]
 resolver = "2"
